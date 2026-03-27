@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "id": "connected-heartbeat",
+      "description": "Brief green flash every 30s to show device is alive (agent overrides with busy state)",
+      "condition": { "sensor": "system.connected", "op": "==", "value": 1 },
+      "actions": [
+        { "action": "blink", "target": "green", "interval_ms": 30000 }
+      ]
+    }
+  ]
+}
